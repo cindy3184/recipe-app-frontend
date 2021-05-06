@@ -11,15 +11,15 @@ const App = () => {
 
   const [recipes, setRecipes] = useState([]);
   const [search, setSearch] = useState('');
-  const [query, setQuery] = useState('chicken');
+  const [find, setFind] = useState('');
 
 
   useEffect( () => {
     getApi();
-  }, [query]);
+  }, [find]);
 
   const getApi = async () => {
-    const response = await fetch(`https://api.edamam.com/search?q={query}&app_id=${APP_ID}&app_key=${APP_KEY}`);
+    const response = await fetch(`https://api.edamam.com/search?q=${find}&app_id=${APP_ID}&app_key=${APP_KEY}`);
     const data = await response.json(); //format it with json method and any external request needs async and await
     setRecipes(data.hits);
     console.log(data.hits);
@@ -31,7 +31,7 @@ const App = () => {
 
   const getSearch = e => {
     e.preventDefault();
-    setQuery(search);
+    setFind(search);
     setSearch('');
   }
 
