@@ -15,3 +15,8 @@
   border: none;
   padding: 10px;
 }
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  }

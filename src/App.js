@@ -36,11 +36,15 @@ const App = () => {
   }
 
   return (
+    
+
     <div className='App'>
       <form onSubmit={getSearch} className='search-form'>
         <input className='search-bar' type='text' value={search} onChange={updateSearch} />
         <Button className='search-button' type='submit'>Search</Button>
       </form>
+
+     
 
       {recipes.map(recipe => (
         <Recipe 
@@ -50,9 +54,12 @@ const App = () => {
             image={recipe.recipe.image}
             ingredients={recipe.recipe.ingredients}
         />
+       
+      
       ))}
 
     </div>
+
   );
 };
 
