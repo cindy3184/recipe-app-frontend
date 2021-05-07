@@ -1,6 +1,15 @@
+body, html {
+  height: 100%;
+}
+
+
 .App {
-  min-height: 100vh;
-  background-image: linear-gradient(to top, #c1dfc4 0%, #deecdd 100%);
+  background-image: url("https://i.imgur.com/lQ6Hgrc.jpg");
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
 }
 
 .search-form{
@@ -19,4 +28,8 @@
 .row {
   display: flex;
   flex-wrap: wrap;
+  }
+
+  h1 {
+    text-align: center;
   }

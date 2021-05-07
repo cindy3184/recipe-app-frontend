@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import './App.css';
-import Recipe from './Recipe'
+import Recipe from './Recipe';
 import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.min.css'
 
@@ -35,7 +35,9 @@ const App = () => {
     setSearch('');
   }
 
+
   return (
+    
     
 
     <div className='App'>
@@ -47,6 +49,7 @@ const App = () => {
      
 
       {recipes.map(recipe => (
+
         <Recipe 
             key={recipe.recipe.label}
             title={recipe.recipe.label} 

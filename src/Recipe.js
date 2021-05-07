@@ -1,13 +1,15 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card'
-import { Col, Row, Form, } from "react-bootstrap";
+import { Row } from "react-bootstrap";
 
 const Recipe = ({ title, calories, image, ingredients }) => {
     return (
+
+        
         <div>
              <Card className="m-5 border-0 shadow">
             <Row>
-            <Card.Title><h1>{title}</h1></Card.Title>
+           <h1>{title}</h1>
             <Card.Body>
             <ol>
                 {ingredients.map(ingredient => (
@@ -23,7 +25,8 @@ const Recipe = ({ title, calories, image, ingredients }) => {
             </Card>
            
         </div>
-    )
+        
+        )
 }
 
 export default Recipe;
