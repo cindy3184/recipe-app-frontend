@@ -18,7 +18,7 @@ const Recipe = ({ title, calories, image, ingredients }) => {
                     </li>
                 ))}
             </ol>
-            <p>{calories}</p>
+            <p>Calories: {calories}</p>
             <img src={image} alt=''/>
             </Card.Body>
             </Row>

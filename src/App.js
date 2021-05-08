@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
 import Recipe from './Recipe';
 import Button from 'react-bootstrap/Button';
@@ -12,6 +12,16 @@ const App = () => {
   const [recipes, setRecipes] = useState([]);
   const [search, setSearch] = useState('');
   const [find, setFind] = useState('');
+
+
+  async function getAppData() {
+    const BASE_URL = 'http://localhost:3001/api/recipes';
+    const recipes = await fetch(BASE_URL).then(res => res.json());
+    setRecipes((prevState) => ({
+      recipes, 
+      ...prevState
+    }))
+  }
 
 
   useEffect( () => {
