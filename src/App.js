@@ -17,13 +17,17 @@ const App = () => {
   async function getAppData() {
     const BASE_URL = 'http://localhost:3001/api/recipes';
     const recipes = await fetch(BASE_URL).then(res => res.json());
-    setRecipes((prevState) => ({
+    setSearch((prevState) => ({
       recipes, 
       ...prevState
     }))
   }
 
+  useEffect(() => {
+    getAppData();
+  }, []);
 
+  
   useEffect( () => {
     getApi();
   }, [find]);
