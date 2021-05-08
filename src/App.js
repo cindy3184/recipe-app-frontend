@@ -15,7 +15,7 @@ const App = () => {
 
 
   async function getAppData() {
-    const BASE_URL = 'http://localhost:3001/api/recipes';
+    const BASE_URL = 'https://backend-recipe-app.herokuapp.com/api/recipes';
     const recipes = await fetch(BASE_URL).then(res => res.json());
     setSearch((prevState) => ({
       recipes, 
@@ -27,7 +27,8 @@ const App = () => {
     getAppData();
   }, []);
 
-  
+
+
   useEffect( () => {
     getApi();
   }, [find]);
