@@ -7,17 +7,15 @@ const Recipe = ({ title, calories, image, ingredients }) => {
 
         
         <div>
-             <Card className="m-5 border-0 shadow">
+             <Card className="p-8 m-5 border-0 shadow">
             <Row>
-           <h1>{title}</h1>
             <Card.Body>
-            <ol>
+            <h1>{title}</h1>
                 {ingredients.map(ingredient => (
                     <li>
                         {ingredient.text}
                     </li>
                 ))}
-            </ol>
             <p>Calories: {calories}</p>
             <img src={image} alt=''/>
             </Card.Body>
