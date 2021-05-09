@@ -1,15 +1,15 @@
-body, html {
-  height: 100%;
+body {
+  margin: auto;
 }
 
-
 .App {
-  background-image: url("https://i.imgur.com/lQ6Hgrc.jpg");
+  background-image: linear-gradient(to top, #c1dfc4 0%, #deecdd 100%);
   position: absolute;
   top: 0;
   left: 0;
   min-width: 100%;
   min-height: 100%;
+
 }
 
 .search-form{
@@ -25,10 +25,10 @@ body, html {
   padding: 10px;
 }
 
-.row {
+
+.recipe-card {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   text-align: center;
-  
-  }
+}

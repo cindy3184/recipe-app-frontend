@@ -3,6 +3,10 @@ import './App.css';
 import Recipe from './Recipe';
 import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.min.css'
+import { makeStyles } from '@material-ui/core/styles';
+import { Route, Link } from 'react-router-dom';
+
+
 
 const App = () => {
 /// API AUTHENTICATION ///
@@ -52,17 +56,16 @@ const App = () => {
 
 
   return (
-    
-    
+  
+
 
     <div className='App'>
-      <form onSubmit={getSearch} className='search-form'>
+  
+      <form onSubmit={getSearch} className='search-form'><span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span>
         <input className='search-bar' type='text' value={search} onChange={updateSearch} />
         <Button className='search-button' type='submit'>Search</Button>
       </form>
-
-     
-
+     <div className='recipe-card'>
       {recipes.map(recipe => (
 
         <Recipe 
@@ -75,8 +78,10 @@ const App = () => {
        
       
       ))}
+      </div>
 
     </div>
+
 
   );
 };
