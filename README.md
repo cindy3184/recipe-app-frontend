@@ -18,8 +18,8 @@ An app that allows the user to search any recipe and get its ingredients.
 [click here](https://front-recipe-app.herokuapp.com) to view project.
 
 # Screenshot
-![homepage](https://imgur.com/PdEIZQF)
-![search results](https://imgur.com/dwYoSCH)
+![homepage](https://i.imgur.com/PdEIZQF.png)
+![search results](https://i.imgur.com/dwYoSCH.png)
 
 # Future Enhancements
 * Allow users to save recipes
