@@ -60,7 +60,10 @@ const App = () => {
 
 
     <div className='App'>
-  
+        <header>
+        <h1>RECIPES</h1>
+        <p>Type in your search below to view hundreds of delicious recipes!</p>
+        </header>
       <form onSubmit={getSearch} className='search-form'><span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span>
         <input className='search-bar' type='text' value={search} onChange={updateSearch} />
         <Button className='search-button' type='submit'>Search</Button>
